@@ -1,0 +1,46 @@
+.navContainer {
+  width: 100%;
+  height: 60px;
+  padding: 15px;
+  display: flex;
+}
+
+.innerContainer {
+  height: 40px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.leftInner,
+.rightInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.leftInner h1 {
+  color: rgb(218, 31, 31);
+}
+
+li,
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+  margin-right: 20px;
+}
+
+.links {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links:hover {
+  color: rgb(231, 66, 66);
+  transition: color 0.15s ease-in;
+}
