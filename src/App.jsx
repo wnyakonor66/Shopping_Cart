@@ -1,8 +1,12 @@
 import "./App.css";
-import Home from "./component/Home";
+import Shop from "./component/Shop";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Shop delay={1000} />
+    </>
+  );
 }
 
 export default App;

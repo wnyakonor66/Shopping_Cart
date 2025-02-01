@@ -22,10 +22,9 @@ const HeroSection = () => {
             </p>
           </div>
         </div>
-      </div>
-
-      <div className="footerContainer">
-        <p>&copy; 2025 Mainee. All rights reserved.</p>
+        <div className="footerContainer">
+          <p>&copy; 2025 Mainee. All rights reserved.</p>
+        </div>
       </div>
     </div>
   );

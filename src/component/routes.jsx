@@ -1,15 +1,15 @@
-import App from "../App";
 import Home from "./Home";
+import Shop from "./Shop";
 
 const routes = [
   {
     path: "/",
     element: <Home />,
   },
-  // {
-  //   path: "/shopping",
-  //   element: <Shopping />,
-  // },
+  {
+    path: "/shop",
+    element: <Shop />,
+  },
 ];
 
 export default routes;

@@ -4,7 +4,6 @@
   background-color: whitesmoke;
   height: 100%;
   flex-direction: column;
-  overflow-y: scroll;
 }
 
 .innerHero {
@@ -39,7 +38,7 @@
   margin-top: 40px;
   gap: 30px;
   padding: 8px;
-  box-shadow: 3px 3px 3px rgb(161, 178, 195, 0.6);
+  background-color: whitesmoke;
 }
 
 .headContainer {
@@ -80,6 +79,8 @@
   margin-top: 5px;
   padding: 2px;
   background-color: white;
+  height: 100px;
+  padding: 15px 0;
 }
 
 .footerContainer p {
