@@ -2,7 +2,7 @@ import "../assets/styles/navbar.css";
 import logo from "../assets/img/logo.png";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ totalProducts = 0 }) => {
   return (
     <div className="navContainer">
       <div className="innerContainer">
@@ -21,6 +21,9 @@ const Navbar = () => {
               <Link to="/shop" className="links">
                 Shop
               </Link>
+              {totalProducts > 0 && (
+                <span className="shopBadge">{totalProducts}</span>
+              )}
             </li>
             <li>
               <Link to="/cart" className="links">

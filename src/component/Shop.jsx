@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import "../assets/styles/shop.css";
+import Navbar from "./Navbar";
+import cart from "../assets/img/cart.png";
 const Shop = ({ delay }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -22,6 +24,7 @@ const Shop = ({ delay }) => {
 
   return (
     <div>
+      <Navbar totalProducts={products.length} />
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
       {products.length > 0 && (
@@ -36,8 +39,13 @@ const Shop = ({ delay }) => {
                   style={{ height: "100px", width: "100px" }}
                 />
                 <h3>{product.title}</h3>
-                {/* <p>{product.description}</p> */}
-                <p className="price_tag">Ghc{product.price}</p>
+                <p className="price_tag">${product.price}</p>
+                <div className="btnCartContainer">
+                  <button className="cartButton">
+                    <img src={cart} alt="Cart Icon" className="cartIcon" />
+                    Add to cart
+                  </button>
+                </div>
               </div>
             ))}
           </div>

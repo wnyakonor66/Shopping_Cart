@@ -1,7 +1,6 @@
 .Shop_container {
   background-color: #ffffff;
   width: 100%;
-  border: 1px solid red;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -9,7 +8,6 @@
 
 .Shop_container h1 {
   font-size: 1.4rem;
-  border: 1px solid blue;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -24,7 +22,6 @@
   gap: 10px;
   padding: 20px;
   width: 100%;
-  border: 1px solid green;
   flex-grow: 1;
   overflow: hidden;
 }
@@ -43,7 +40,8 @@
 }
 
 .product_items h3 {
-  font-size: 1rem;
+  font-size: 13px;
+  line-height: 1.2;
 }
 
 .product_items p {
@@ -52,10 +50,15 @@
 
 .price_tag {
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
   padding: 2px;
-  color: rgb(47, 217, 255);
+  color: rgb(25, 189, 226);
+  background-color: black;
+  border-radius: 15px;
+  padding: 2px;
+  width: 55px;
+  height: 20px;
 }
 
 .product_items:hover {
@@ -63,4 +66,40 @@
   background-color: #ffffff;
   transition: background-color ease-in 0.15s, transform ease-in 0.15s;
   transform: scale(0.9);
+}
+
+.btnCartContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 3px;
+}
+
+.cartButton {
+  border: none;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  color: #ffffff;
+  font-weight: 700;
+  background-color: rgb(235, 92, 20);
+  border-radius: 5px;
+}
+
+.cartIcon {
+  width: 15px;
+  height: 17;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartButton:hover {
+  background-color: rgb(73, 14, 129);
+  transition: background-color ease-in 1s;
+  cursor: pointer;
 }
