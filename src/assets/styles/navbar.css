@@ -47,6 +47,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 70px;
 }
 
 .links:hover {
@@ -69,5 +70,22 @@ ul {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 113px;
+  right: 164px;
+}
+
+.cartCount {
+  background-color: rgb(232, 59, 7);
+  width: 20px;
+  height: 22px;
+  border-radius: 15px;
+  padding: 3px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: rgb(240, 247, 253);
+  font-size: 0.9rem;
+  position: absolute;
+  top: 0;
+  right: 44px;
 }

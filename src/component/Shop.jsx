@@ -6,6 +6,7 @@ const Shop = ({ delay }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [products, setProduct] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
     setTimeout(() => {
@@ -22,9 +23,13 @@ const Shop = ({ delay }) => {
     }, delay);
   }, [delay]);
 
+  const addToCart = () => {
+    setCartCount((prevCount) => prevCount + 1);
+  };
+
   return (
     <div>
-      <Navbar totalProducts={products.length} />
+      <Navbar totalProducts={products.length} cartCount={cartCount} />
       {loading && <p>Loading...</p>}
       {error && <p>Error: {error}</p>}
       {products.length > 0 && (
@@ -41,7 +46,7 @@ const Shop = ({ delay }) => {
                 <h3>{product.title}</h3>
                 <p className="price_tag">${product.price}</p>
                 <div className="btnCartContainer">
-                  <button className="cartButton">
+                  <button className="cartButton" onClick={addToCart}>
                     <img src={cart} alt="Cart Icon" className="cartIcon" />
                     Add to cart
                   </button>
